@@ -17,6 +17,7 @@ You can access demo app in : <https://laravel-inertia-vuetify.fly.dev>
 - Authentication (Login, Register, Forgot Password)
 - Example CRUD with serverside pagination, searching, and sorting
 - SPA (Single Page Application)
+- Login wiht email or username
 
 ## Installation
 
@@ -68,8 +69,3 @@ Run application
 php artisan serve
 ```
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
