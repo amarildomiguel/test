@@ -29,7 +29,7 @@ import NavigationMenu from '@/Components/NavigationMenu.vue'
 </template>
 
 <script>
-import gravatar from '../Utils/gravatar'
+import gravatar from '@/Utils/gravatar'
 
 export default {
   data() {
