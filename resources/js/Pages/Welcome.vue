@@ -1,6 +1,4 @@
 <script setup>
-import ApplicationLogo from '@/Components/ApplicationLogo.vue'
-import VuetifyLogo from '@/Components/VuetifyLogo.vue'
 import { Head, Link } from '@inertiajs/vue3'
 
 const props = defineProps({
@@ -19,11 +17,8 @@ const props = defineProps({
           <v-col cols="12" sm="12" md="10" lg="4">
             <v-card class="pa-3 rounded-lg elevation-8">
               <v-card-title>
-                <div class="d-flex justify-center mb-4">
-                  <ApplicationLogo class="mr-1" style="height: 75" />
-                  <VuetifyLogo class="ml-1" style="height: 75" />
-                </div>
-                <span class="text-h5">Welcome to Laravel + Vuetify</span>
+                <div class="d-flex justify-center mb-4"></div>
+                <span class="text-h5">Welcome</span>
               </v-card-title>
               <v-card-text>
                 <p class="text-body-2">
