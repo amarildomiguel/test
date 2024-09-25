@@ -56,6 +56,14 @@ class PeopleController extends Controller
             'person' => $person
         ]);
     }
+    public function show(People $person)
+    {
+        $person->load('user');
+
+        return inertia('People/Show', [
+            'person' => $person
+        ]);
+    }
 
     public function update(People $person, Request $request)
     {

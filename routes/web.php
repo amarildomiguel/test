@@ -27,6 +27,6 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::resource('/people', PeopleController::class)->except(['show']);
+Route::resource('/people', PeopleController::class);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

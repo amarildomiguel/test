@@ -39,6 +39,7 @@ import { Head, Link } from '@inertiajs/vue3'
       >
         <template #[`item.gender`]="{ item }">{{ item.gender == 'male' ? 'Male' : 'Female' }}</template>
         <template #[`item.action`]="{ item }">
+          <v-icon class="ma-2" color="primary" icon="mdi-eye" size="small" @click="showItem(item)" />
           <Link :href="`/people/${item.id}/edit`" as="button">
             <v-icon color="warning" icon="mdi-pencil" size="small" />
           </Link>
@@ -118,6 +119,9 @@ export default {
           this.$toast.error('Failed to load data')
           this.isLoadingTable = false
         })
+    },
+    showItem(item) {
+      this.$inertia.visit(`/people/${item.id}`)
     },
     deleteItem(item) {
       this.deleteId = item.id
