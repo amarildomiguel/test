@@ -19,6 +19,10 @@ class UserObserver
                 'email' => $user->email,
             ]);
         }
+
+        if ($user->roles->isEmpty()) {
+            $user->assignRole('public');
+        }
     }
 
     /**

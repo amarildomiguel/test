@@ -15,12 +15,11 @@ class PeopleController extends Controller
     public function index(Request $request)
     {
         if ($request->wantsJson()) {
-            $query = People::query()->when($request->get('search'), function ($query, $search) {
-                $search = strtolower(trim($search));
-                return $query->whereRaw('LOWER(name) LIKE ?', ["%$search%"]);
-            })->when($request->get('sort'), function ($query, $sortBy) {
-                return $query->orderBy($sortBy['key'], $sortBy['order']);
-            });
+
+            $query = People::query()
+                ->with('user')
+                ->search($request->get('search'))
+                ->sort($request->get('sort'));
 
             $data = $query->paginate($request->get('limit', 10));
 
